@@ -1,12 +1,19 @@
-def battery_is_ok(temperature, soc, charge_rate):
-  if temperature < 0 or temperature > 45:
-    print('Temperature is out of range!')
-    return False
-  elif soc < 20 or soc > 80:
-    print('State of Charge is out of range!')
-    return False
-  elif charge_rate > 0.8:
-    print('Charge rate is out of range!')
-    return False
+BMS_allowed_range = {'temperature': {'min': 0, 'max': 45},
+                'soc': {'min': 20, 'max': 80},
+                'charge_rate': {'min': 0, 'max': 0.8}}
 
-  return True
+
+
+def get_out_of_range_count(BMS_input):
+    out_of_range_count =0
+    for c in BMS_input.items() :
+        if c not in range (BMS_allowed_range.c[min], BMS_allowed_range.c[max]):
+            out_of_range_count =+ 1
+    return out_of_range_count
+
+def print_out_of_range_output(BMS_input):
+    out_of_range_count = get_out_of_range_count(BMS_input)
+    if len(out_of_range_count) == 0: 
+        return True
+    else :
+        return False
