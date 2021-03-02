@@ -5,6 +5,6 @@ if __name__ == '__main__':
     #assert(EV_test.battery_is_ok(50, 85, 0) is False)
     assert(EV_test.print_out_of_range_output({
        'temperature' : 25,
-       'state_of_charge' : 70,
+       'soc' : 70,
        'charge_rate' : 0.9
           }) is False) 
