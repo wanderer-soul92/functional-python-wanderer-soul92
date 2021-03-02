@@ -7,4 +7,4 @@ if __name__ == '__main__':
        'temperature' : 25,
        'state_of_charge' : 70,
        'charge_rate' : 0.9
-          }) is True) 
+          }) is False) 
