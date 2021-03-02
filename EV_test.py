@@ -7,7 +7,7 @@ import numpy as np
 def get_out_of_range_count(BMS_input):
     out_of_range_count =0
     for key,value in BMS_input.items() :
-        if value not in np.arange(BMS_allowed_range[key]['min'], BMS_allowed_range[key]['max']):
+        if (value < BMS_allowed_range[key]['min']) or (value > BMS_allowed_range[key]['max']):
             out_of_range_count =+ 1
     return out_of_range_count
 
